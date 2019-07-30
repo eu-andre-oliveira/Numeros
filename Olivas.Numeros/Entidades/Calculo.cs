@@ -121,7 +121,12 @@ namespace Olivas.Numeros.Entidades
                 soma = soma + Convert.ToInt32((item.ToString()[0].ToString()));
             }
             return soma;
+
+            //teste 
         }
+
+
+
 
         private int ReduzNumero(int numero)
         {
