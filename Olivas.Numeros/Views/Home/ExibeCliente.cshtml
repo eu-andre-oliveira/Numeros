@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "ExibeCliente";
+}
+
+@model Olivas.Numeros.Entidades.Cliente
+
+
+<h2>Exibindo Cliente "@Model.Nome"</h2>
+
+<p>Motivação: @Model.NumeroMotivacao </p>
+
+<p>Expressão: @Model.NumeroExpressao </p>
+ 
+<p> @Olivas.Numeros.Models.Tabela.ListaExpressao.Where(e => e.Key == @Model.NumeroExpressao).FirstOrDefault().Value </p>
+
+<p>Como o mundo te vê: @Model.NumeroImpressao </p>
+
+<p>Linha numerologica: @Model.PrimeiraLinhaPiramide </p>
+
+<p>Destino: @Model.NumeroDestino </p>
+
+<p>Ciclo 1 : @Model.Numero1Ciclo </p>
+
+<p>Momento 1 : @Model.NumeroMomento1 </p>
+
+<p>Ciclo 2 : @Model.Numero2Ciclo </p>
+
+<p>Momento 2 : @Model.NumeroMomento2 </p>
+
+<p>Ciclo 3 : @Model.Numero3Ciclo </p>
+
+<p>Momento 3 : @Model.NumeroMomento3 </p>
+
+<p>Momento 4 : @Model.NumeroMomento4 </p>

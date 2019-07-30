@@ -1,0 +1,19 @@
+﻿@model  Olivas.Numeros.Entidades.Cliente
+
+@using (Html.BeginForm("Calcula", "Home", FormMethod.Post))
+{
+    @Html.LabelFor(u => u.Nome, "Nome")
+    @Html.TextBoxFor(u => u.Nome, new { @class = "form-control" })
+    @Html.ValidationMessageFor(u => u.Nome)
+
+    @Html.LabelFor(u => u.Assinatura, "Assinatura")
+    @Html.TextBoxFor(u => u.Assinatura, new { @class = "form-control" })
+    @Html.ValidationMessageFor(u => u.Assinatura)
+
+    @Html.LabelFor(u => u.DataNascimento, "Nascimento")
+    @Html.EditorFor(u => u.DataNascimento, new { @class = "form-control" })
+    @Html.ValidationMessageFor(u => u.DataNascimento)
+
+
+    <input type="submit" value="Calcular" />
+}

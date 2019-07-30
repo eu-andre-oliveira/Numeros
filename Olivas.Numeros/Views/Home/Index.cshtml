@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Bem vindo Saiba Sobre Você</h2>
+
+@model IList<Olivas.Numeros.Entidades.Cliente>
+
+@Html.ActionLink("Novo Calculo", "Form")
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Nascimento</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+        <tr>
+            <td>@u.Id</td>
+            <td>@u.Nome</td>
+            <td>@u.DataNascimento.ToString("ddMMyyyy")</td>
+            <td>@Html.ActionLink(
+                       "Exibir",
+                       "ExibeCliente",
+                       "Home",
+                       new { @idCliente = u.Id },
+                       null)
+            </td>
+</tr>
+        }
+    </tbody>
+</table>
