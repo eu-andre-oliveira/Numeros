@@ -66,7 +66,7 @@ namespace Olivas.Numeros.Entidades
 
             somaTotal = ReduzNumero(somaTotal);
 
-            somaConsoantes = ReduzNumero(somaConsoantes);
+            somaConsoantes = ReduzNumero(somaConsoantes, true);
 
             somaVogais = ReduzNumero(somaVogais);
 
@@ -128,10 +128,10 @@ namespace Olivas.Numeros.Entidades
 
 
 
-        private int ReduzNumero(int numero)
+        private int ReduzNumero(int numero, bool umANove = false)
         {
             var numeroTemp = numero;
-            while (numeroTemp >= 10 && numeroTemp != 11 && numeroTemp != 22)
+            while (numeroTemp >= 10 && umANove ? true : (numeroTemp != 11 && numeroTemp != 22) )
             {
                 numeroTemp = Convert.ToInt32((numero.ToString()[0].ToString()))
                        + Convert.ToInt32((numero.ToString()[1].ToString()));
